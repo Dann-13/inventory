@@ -53,7 +53,7 @@ export default async function AuthButton() {
       Hey, {user.email}!
       <form action={signOutAction}>
         <Button type="submit" variant={"outline"}>
-          Sign out
+          Cerrar Sesion
         </Button>
       </form>
     </div>

@@ -13,7 +13,7 @@ export const Slider = () => {
         </div>
       </Link>
 
-      <Link href={"/documentos"}>
+      <Link href={"/protected/documents"}>
         <div className="flex items-center text-lg mb-4 px-4 py-2 rounded-md hover:bg-[#8D7FE0] hover:text-white transition duration-300 group">
           <FaFolder className="mr-3 text-[#8D7FE0] group-hover:text-white" /> {/* Icono de Documentos */}
           Documentos
