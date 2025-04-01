@@ -1,6 +1,7 @@
 import { FaImage } from "react-icons/fa";
 import { FaTable } from "react-icons/fa";
 import { TableMenu } from "./table/TableMenu";
+import { HeadingSelector } from "./heading/HeadingSelector";
 
 const MenuBar = ({ editor }: { editor: any }) => {
   if (!editor) return null;
@@ -18,6 +19,8 @@ const MenuBar = ({ editor }: { editor: any }) => {
 
   return (
     <div className="menu-bar">
+      {/* Selector de títulos */}
+      <HeadingSelector editor={editor} />
       {/* Negrita, cursiva, etc. */}
       <button
         onClick={() => editor.chain().focus().toggleBold().run()}

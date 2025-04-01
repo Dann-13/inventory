@@ -11,7 +11,13 @@ import MenuBar from "./editor/menubar/MenuBar";
 const Editor = () => {
   const editor = useEditor({
     extensions: [
-      StarterKit,
+      StarterKit.configure(
+        {
+          heading: {
+            levels: [1, 2, 3, 4, 5, 6],
+          },
+        }
+      ),
       Image,
       Table.configure({
         resizable: true,
