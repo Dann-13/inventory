@@ -36,6 +36,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -43,8 +44,9 @@
 
 /* styles/globals.css */
 .editor-container {
-  height: 100%; 
-  min-height: 500px; /* Altura mínima inicial */
+  height: 100%;
+  min-height: 500px;
+  /* Altura mínima inicial */
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 16px;
@@ -53,19 +55,24 @@
 }
 
 .tiptap-editor {
-  flex-grow: 1; /* Hace que el editor ocupe todo el espacio disponible */
-  outline: none; /* Elimina el borde azul al enfocar */
-  overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
+  flex-grow: 1;
+  /* Hace que el editor ocupe todo el espacio disponible */
+  outline: none;
+  /* Elimina el borde azul al enfocar */
+  overflow-y: auto;
+  /* Permite desplazamiento si el contenido es largo */
 }
 
-.ProseMirror{
+.ProseMirror {
   height: 100%;
 }
 
 /* Estilo para los párrafos dentro del editor */
 .tiptap-editor p {
-  margin: 0 0 1rem 0; /* Espaciado entre párrafos */
-  min-height: 1.5rem; /* Altura mínima por línea */
+  margin: 0 0 1rem 0;
+  /* Espaciado entre párrafos */
+  min-height: 1.5rem;
+  /* Altura mínima por línea */
 }
 
 .menu-bar {
@@ -93,13 +100,15 @@
   border: 1px solid #eee;
   border-radius: 4px;
 }
+
 /* Estilo para tablas */
 table {
   border-collapse: collapse;
   margin: 10px 0;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #ddd;
   padding: 8px;
 }
@@ -111,7 +120,8 @@ td, th {
   width: 100%;
 }
 
-.my-custom-table td, .my-custom-table th {
+.my-custom-table td,
+.my-custom-table th {
   border: 1px solid #ddd;
   padding: 8px;
   min-width: 50px;
@@ -133,4 +143,29 @@ td, th {
   font-size: 1.75rem;
   font-weight: bold;
   margin: 0.875rem 0;
+}
+
+/* Estilos para los párrafos */
+/* styles/globals.css */
+.tiptap p[data-text-align="left"] {
+  text-align: left;
+}
+
+.tiptap p[data-text-align="center"] {
+  text-align: center;
+}
+
+.tiptap p[data-text-align="right"] {
+  text-align: right;
+}
+
+.tiptap p[data-text-align="justify"] {
+  text-align: justify;
+}
+
+.tiptap h1[data-text-align],
+.tiptap h2[data-text-align],
+.tiptap h3[data-text-align] {
+  display: inline-block;
+  width: 100%;
 }

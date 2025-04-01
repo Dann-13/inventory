@@ -7,6 +7,7 @@ import TableRow from "@tiptap/extension-table-row";
 import TableCell from "@tiptap/extension-table-cell";
 import TableHeader from "@tiptap/extension-table-header";
 import MenuBar from "./editor/menubar/MenuBar";
+import TextAlign from "@tiptap/extension-text-align";
 
 const Editor = () => {
   const editor = useEditor({
@@ -28,6 +29,11 @@ const Editor = () => {
       TableRow,
       TableCell,
       TableHeader,
+      TextAlign.configure({
+        types: ["heading", "paragraph"],
+        alignments: ["left", "center", "right", "justify"],
+        defaultAlignment: "left",
+      }),
     ],
     content: "<p>¡Empieza a escribir tu informe aquí! 🚀</p>",
     editorProps: {

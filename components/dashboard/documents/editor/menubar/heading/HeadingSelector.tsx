@@ -30,13 +30,13 @@ export const HeadingSelector = ({ editor }: HeadingSelectorProps) => {
       <DropdownMenu>
         <DropdownMenuTrigger><FaHeading size={15} /></DropdownMenuTrigger>
         <DropdownMenuSeparator />
-        <DropdownMenuContent>
+        <DropdownMenuContent className="w-fit min-w-[55px]">
           {options.map((option) => (
             <DropdownMenuItem key={option.value}>
               <button
                 onClick={() => handleChange(option.value)}
                 className={`p-1 rounded ${editor.isActive("heading", { level: option.value })
-                  ? "bg-blue-500 text-white"
+                  ? "bg-primary_color text-white"
                   : "hover:bg-gray-100"
                   }`}
               >
