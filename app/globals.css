@@ -103,3 +103,20 @@ td, th {
   border: 1px solid #ddd;
   padding: 8px;
 }
+
+/* Estilos para el menu de las opcione de las tablas  */
+.my-custom-table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.my-custom-table td, .my-custom-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  min-width: 50px;
+}
+
+.my-custom-table th {
+  background-color: #f5f5f5;
+}

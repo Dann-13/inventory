@@ -1,5 +1,6 @@
 import { FaImage } from "react-icons/fa";
 import { FaTable } from "react-icons/fa";
+import { TableMenu } from "./table/TableMenu";
 
 const MenuBar = ({ editor }: { editor: any }) => {
   if (!editor) return null;
@@ -32,20 +33,7 @@ const MenuBar = ({ editor }: { editor: any }) => {
       </button>
 
       {/* Tablas */}
-      <button
-        onClick={() =>
-          editor
-            .chain()
-            .focus()
-            .insertTable({ rows: 3, cols: 3, withHeaderRow: true })
-            .run()
-        }
-      >
-         <label htmlFor="image-upload" className="cursor-pointer text-black hover:text-primary_color">
-          <FaTable size={24} />
-        </label>
-      </button>
-
+      <TableMenu editor={editor} />
       {/* Imágenes */}
       <div className="flex items-center space-x-3">
         <label htmlFor="image-upload" className="cursor-pointer text-black hover:text-primary_color">
