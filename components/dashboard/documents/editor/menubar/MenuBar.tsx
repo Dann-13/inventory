@@ -3,6 +3,7 @@ import { TableMenu } from "./table/TableMenu";
 import { HeadingSelector } from "./heading/HeadingSelector";
 import { TextAlignControls } from "./text-align/TextAlignControls";
 import { ListControls } from "./list-controls/ListControls";
+import { UndoRedoControls } from "./Undo-Redo/UndoRedoControls";
 
 const MenuBar = ({ editor }: { editor: any }) => {
   if (!editor) return null;
@@ -20,6 +21,9 @@ const MenuBar = ({ editor }: { editor: any }) => {
 
   return (
     <div className="menu-bar">
+      {/* Controles Deshacer/Rehacer */}
+      <UndoRedoControls editor={editor} />
+
       {/* Selector de títulos */}
       <HeadingSelector editor={editor} />
       

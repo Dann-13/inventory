@@ -47,6 +47,17 @@ const Editor = () => {
     ],
     content: "<p>¡Empieza a escribir tu informe aquí! 🚀</p>",
     editorProps: {
+      handleKeyDown: (view, event) => {
+        if (event.ctrlKey && event.key === "z") {
+          editor?.chain().focus().undo().run();
+          return true;
+        }
+        if (event.ctrlKey && event.key === "y") {
+          editor?.chain().focus().redo().run();
+          return true;
+        }
+        return false;
+      },
       attributes: {
         class: "tiptap-editor",
       }
