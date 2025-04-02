@@ -8,6 +8,8 @@ import TableCell from "@tiptap/extension-table-cell";
 import TableHeader from "@tiptap/extension-table-header";
 import MenuBar from "./editor/menubar/MenuBar";
 import TextAlign from "@tiptap/extension-text-align";
+import { Color } from "@tiptap/extension-color";
+import { TextStyle } from "@tiptap/extension-text-style";
 
 const Editor = () => {
   const editor = useEditor({
@@ -29,7 +31,11 @@ const Editor = () => {
           },
         }
       ),
+      Color.configure({
+        types: ["textStyle"], 
+      }),
       Image,
+      TextStyle,
       Table.configure({
         resizable: true,
         HTMLAttributes: {

@@ -4,6 +4,7 @@ import { HeadingSelector } from "./heading/HeadingSelector";
 import { TextAlignControls } from "./text-align/TextAlignControls";
 import { ListControls } from "./list-controls/ListControls";
 import { UndoRedoControls } from "./Undo-Redo/UndoRedoControls";
+import ColorPicker from "./ColorPicker/ColorPicker";
 
 const MenuBar = ({ editor }: { editor: any }) => {
   if (!editor) return null;
@@ -61,6 +62,10 @@ const MenuBar = ({ editor }: { editor: any }) => {
           accept="image/*"
         />
       </div>
+
+      { /* Color Picker */ }
+      <ColorPicker editor={editor} />
+
     </div>
   );
 };

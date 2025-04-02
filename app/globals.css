@@ -190,3 +190,9 @@ th {
 .menu-bar button:hover:not(:disabled) {
   background-color: #f0f0f0;
 }
+
+/* ColorPicker */
+.tiptap span[style*="color"] {
+  padding: 0 1px;
+  border-radius: 2px;
+}
