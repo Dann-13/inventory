@@ -1,9 +1,16 @@
+'use client'
 import Link from 'next/link';
+import { useState } from 'react';
 import { FaCog, FaFolder, FaTachometerAlt, FaUserCircle } from "react-icons/fa";
+import { CiMenuBurger } from "react-icons/ci";
+import { CiMenuFries } from "react-icons/ci";
 
 export const Slider = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
-    <div className="w-64 h-screen bg-white text-gray-800 flex flex-col p-4 shadow-lg border-r-2 border-gray-200">
+    <div className={`xl:h-[100vh] overflow-y-scroll fixed xl:static w-[80%] md:w-[35%] lg:w-[30%] xl:w-auto h-full bg-white top-0 p-4 flex flex-col justify-between z-50 slider-bar-container ${showMenu ? "left-0" : "-left-full"
+      } transition-all`}>
 
       {/* Enlaces del Sidebar */}
       <Link href={"/protected/home"}>
@@ -38,6 +45,13 @@ export const Slider = () => {
       <div className="mt-auto text-center text-sm text-gray-500">
         © 2025 Inventory
       </div>
+
+      <button
+          onClick={() => setShowMenu(!showMenu)}
+          className="xl:hidden fixed bottom-4 right-4 bg-primary_color text-white p-5 rounded-full z-50"
+        >
+          {showMenu ? <CiMenuFries size={20} /> : <CiMenuBurger size={20} />}
+        </button>
     </div>
   );
 }
