@@ -14,6 +14,16 @@ const Editor = () => {
     extensions: [
       StarterKit.configure(
         {
+          bulletList: {
+            HTMLAttributes: {
+              class: "list-disc pl-6",
+            },
+          },
+          orderedList: {
+            HTMLAttributes: {
+              class: "list-decimal pl-6",
+            }, 
+          },
           heading: {
             levels: [1, 2, 3, 4, 5, 6],
           },
