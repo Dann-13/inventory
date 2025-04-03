@@ -5,6 +5,7 @@ import { TextAlignControls } from "./text-align/TextAlignControls";
 import { ListControls } from "./list-controls/ListControls";
 import { UndoRedoControls } from "./Undo-Redo/UndoRedoControls";
 import ColorPicker from "./ColorPicker/ColorPicker";
+import {  TextEnhancer } from "../gemini/TextEnhacer";
 
 const MenuBar = ({ editor }: { editor: any }) => {
   if (!editor) return null;
@@ -66,6 +67,8 @@ const MenuBar = ({ editor }: { editor: any }) => {
       { /* Color Picker */ }
       <ColorPicker editor={editor} />
 
+      { /* Gemini */}
+      <TextEnhancer editor={editor} />
     </div>
   );
 };

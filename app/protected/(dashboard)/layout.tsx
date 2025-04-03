@@ -8,11 +8,9 @@ export default async function Layout({
   return (
     <div className="w-full h-screen flex">
      <div className="min-h-screen grid grid-cols-1 xl:grid-cols-9">
-        {/* Barra lateral fija */}
         <div className="xl:col-span-2">
           <Slider />
         </div>
-        {/* Contenido dinámico que cambiará según la página */}
         <div className="xl:col-span-7">
           <div className="h-[100vh] overflow-y-scroll lg:p-8 bg-gray-100">
             {children}
