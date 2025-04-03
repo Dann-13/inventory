@@ -7,7 +7,7 @@ export default async function Layout({
 }) {
   return (
     <div className="w-full h-screen flex">
-     <div className="min-h-screen grid grid-cols-1 xl:grid-cols-9">
+     <div className="min-h-screen grid grid-cols-1 xl:grid-cols-9 w-full">
         <div className="xl:col-span-2">
           <Slider />
         </div>
