@@ -6,6 +6,7 @@ import { ListControls } from "./list-controls/ListControls";
 import { UndoRedoControls } from "./Undo-Redo/UndoRedoControls";
 import ColorPicker from "./ColorPicker/ColorPicker";
 import {  TextEnhancer } from "../gemini/TextEnhacer";
+import VoiceToText from "./voice-text/VoiceToText";
 
 const MenuBar = ({ editor }: { editor: any }) => {
   if (!editor) return null;
@@ -19,6 +20,10 @@ const MenuBar = ({ editor }: { editor: any }) => {
       };
       reader.readAsDataURL(file);
     }
+  };
+
+  const handleTranscriptChange = (text: string) => {
+    editor.chain().focus().insertContent(text).run();
   };
 
   return (
@@ -69,6 +74,9 @@ const MenuBar = ({ editor }: { editor: any }) => {
 
       { /* Gemini */}
       <TextEnhancer editor={editor} />
+
+      {/* Dictado por voz */}
+      <VoiceToText editor={editor} />
     </div>
   );
 };
